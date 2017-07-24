@@ -13,7 +13,7 @@
 
     var e=document.createElement('script');
     //e.setAttribute('src','http://localhost:8080/nctall_full.js');
-    e.setAttribute('src','http://xn--vngcip-pxa1uk94wvba.vn/tamper_monkey/app/nctall.js');
+    e.setAttribute('src','https://cdn.rawgit.com/DiepEsc/Mp3AlbumDownloadAllScript/482e4b48/nctall.js');
     e.setAttribute('type','text/javascript');
     document.head.appendChild(e);
 })();
