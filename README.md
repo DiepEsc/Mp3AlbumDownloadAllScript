@@ -1,5 +1,5 @@
 # Mp3AlbumDownloadAllScript
-User scripts allow user to download a playlist/album from [Nhac Cua Tui](http://nhaccuatui.com) and [Zing Mp3](http://mp3.zing.vn)
+User scripts allow user to download a playlist/album from [Nhac Cua Tui](http://nhaccuatui.com), [Zing Mp3](http://mp3.zing.vn) and [Nhac Vui](http://nhac.vui.vn)
 # Tutorial
 See the tutorial video on Youtube:</br>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=EkDSXsS63_Q
