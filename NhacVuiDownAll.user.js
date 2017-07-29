@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author       Điệp Esc
 // @include      /http:\/\/nhac\.vui\.vn/[^.]*\-a[a-z0-9]*.html/
 // @grant        none
 // ==/UserScript==
