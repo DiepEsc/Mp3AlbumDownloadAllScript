@@ -1,12 +1,13 @@
 function downloadAll(){
 	e=$('.playing_absolute')[0];
-	uxml=e.innerHTML.match('http\://www\.nhaccuatui\.com/flash/xml\?[^\"]*')[0];
+	uxml=e.innerHTML.match('https?\://(www\.)?nhaccuatui\.com/flash/xml\?[^\"]*')[0];
 	request = new XMLHttpRequest();
 	request.onreadystatechange = function() { 
         if (request.readyState == 4 && request.status == 200){
 			xml=request.responseText;
+			console.log(xml);
 			links='';
-			matchers=xml.match(/http:\/\/[^\]]*\.mp3/gm);
+			matchers=xml.match(/https?:\/\/[^\]]*\.mp3/gm);
 			for(i=0;i<matchers.length;i++){
 				links=links+(links.length>0?' \r\n':'')+matchers[i];
 			}
@@ -35,9 +36,9 @@ _downloadNow=function(){
 
 function initUI(){
 	e=document.createElement('li');
-	e.innerHTML='<a href="javascript:;" id="DiepEsc" onclick="downloadAll();"><span class="icon_download"></span>Download all</a>';
-	$('.box_menu_player')[0].childNodes[1].appendChild(e);
-	$('.box_menu_player')[0].childNodes[1].childNodes[2].setAttribute('class','hide');
+	e.innerHTML='<li><a href="javascript:;" id="DiepEsc" onclick="downloadAll();"><span class="icon_download"></span>Download all</a></li>';
+	$('.box_menu_player > ul')[0].appendChild(e);
+	$($('.box_menu_player > ul > li')[1]).hide();
 	$('#btnDownloadPlaylist').addClass('hide');
 	e.outerHTML=e.outerHTML+"<br><br><p id =\"nctaa\"></p><textarea class='hide' id='ta_downloadlinks' style='margin: 0px; height: 130px; width: 100%; resize: none; text-indent: 0;'></textarea>";
 }
