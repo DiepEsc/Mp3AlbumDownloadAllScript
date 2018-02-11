@@ -42,11 +42,11 @@ initUI=function(){
 	ta.setAttribute('class','none');
 	ta.setAttribute('style','margin: 0px; height: 130px; width: 100%; resize: none');
 	var player;
-	if(window.location.href.startsWith("http://mp3.zing.vn/nghe-si/")){
-		player=document.getElementsByClassName('all-view')[0];
+	if(document.location.href.match(/https?:\/\/mp3.zing.vn\/nghe-si\//)){
+		player=$('.func-tool')[0];
 	}
 	else{
-		player=document.getElementsByClassName('fn-tabgroup')[0];
+		player=$('.fn-tabgroup')[0];
 	}
     if(player){
         player.appendChild(zt_button);
@@ -57,9 +57,9 @@ initUI=function(){
     }
 }
 initDownloadBox=function(){
-	e=$('.download');
+	e=$('.download > a');
 	for(i=0;i<e.length;i++){
-		e[i].childNodes[0].click();
+		e[i].click();
 	}
 }
 initUI();
