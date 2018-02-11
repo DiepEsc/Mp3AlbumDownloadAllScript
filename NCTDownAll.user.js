@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       Điệp Esc
-// @match        http://www.nhaccuatui.com/playlist/*
+// @match        https://www.nhaccuatui.com/playlist/*
 // @grant        none
 // ==/UserScript==
 
