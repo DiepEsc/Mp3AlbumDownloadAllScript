@@ -4,6 +4,9 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       Điệp Esc
+// @match        https://mp3.zing.vn/album/*
+// @match        https://mp3.zing.vn/playlist/*
+// @match        https://mp3.zing.vn/nghe-si/*
 // @match        http://mp3.zing.vn/album/*
 // @match        http://mp3.zing.vn/playlist/*
 // @match        http://mp3.zing.vn/nghe-si/*
