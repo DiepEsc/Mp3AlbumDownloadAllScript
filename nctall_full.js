@@ -23,15 +23,19 @@ function downloadAll(){
 
 _downloadNow=function(){
 	links=document.getElementById('ta_downloadlinks').value.split('\n');
-	for(i=0;i<links.length;i++){
-		if(links[i].trim().length>0){
-			e=document.createElement('a');
-			e.setAttribute('href',links[i].trim());
-			e.setAttribute('download','Điệp Esc');
-			e.click();
-		}
-	}
+	_rDownload(links,0);
+}
+
+_rDownload=function(links, i){
+	e=document.createElement('a');
+	e.setAttribute('href',links[i].trim());
+	e.setAttribute('download','Điệp Esc');
+	e.addEventListener('click',function(){});
+	e.click();
 	
+	if(i<links.length-1){
+		setTimeout(function(){_rDownload(links,i+1);},2000);		
+	}
 }
 
 function initUI(){
